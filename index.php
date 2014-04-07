@@ -10,35 +10,29 @@ $query = explode("/",str_replace("/quotes/","",$_SERVER['REDIRECT_URL']));
 <meta name="viewport" content="width=320; initial-scale=0.6666; maximum-scale=1.0; minimum-scale=0.6666" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-<meta property="og:title" content="Share Quotes"/>
-  <meta property="og:type" content="Web Application"/>
-  <meta property="og:url" content="http://motyar.info/quotes"/>
-  <meta property="og:image" content=""/>
-  <meta property="og:site_name" content="Share Quotes"/>
-  <meta property="og:description" content="Share Quotes"/>
-  <?php if($query[0]!=''){ ?>
-		<title><?=$query[0]?></title>
+<?php if($query[0]!=''){ ?>
+	<title><?=$query[0]?></title>
 <?php }
 else{ ?>
-		<title>Share Quotes</title>
+	<title>Share Quotes</title>
 <?php
 }
 ?>
-	<meta name="title" content="Share Quotes" />
-	<meta name="description" content="Share Quotes" />
-	<style>
-	@font-face {
+<meta name="title" content="Share Quotes" />
+<meta name="description" content="Share Quotes" />
+<style>
+@font-face {
   font-family: 'Droid Serif';
   font-style: normal;
   font-weight: 400;
   src: local('Droid Serif'), local('DroidSerif'), url(http://themes.googleusercontent.com/static/fonts/droidserif/v3/0AKsP294HTD-nvJgucYTaIbN6UDyHWBl620a-IRfuBk.woff) format('woff');
 }
-		body{
-			width:55%;
-			margin:10em auto;
-			font-family: "Droid Serif", Calibri, "Times New Roman", serif;
-		}
-		a.c{
+body{
+	width:55%;
+	margin:10em auto;
+	font-family: "Droid Serif", Calibri, "Times New Roman", serif;
+}
+a.c{
 			text-decoration:none;
 			position: fixed;
 			top: 0;
@@ -87,16 +81,7 @@ blockquote p {
 
 
 	</style>
-	<script type="text/javascript">
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-9361092-10']);
-		  _gaq.push(['_trackPageview']);
-		  (function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-		</script>
+	
 </head>
 <body>
 
@@ -110,7 +95,7 @@ blockquote p {
 else{ ?>
 <h1>Share Quotes!</h1>
 <form>
-<input type="text" onkeyup="if(event.keyCode==13){window.location.href = 'http://motyar.info/quotes/'+(document.getElementById('contetns').value).replace('?', '_');};" id="contetns" placeholder="Type your quotes~author &amp; press Enter">
+<input type="text" onkeyup="if(event.keyCode==13){window.location.href = window.location.href+(document.getElementById('contetns').value).replace('?', '_');};" id="contetns" placeholder="Type your quotes~author &amp; press Enter">
 </form>
 <?php
 }
