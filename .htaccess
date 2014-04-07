@@ -1,0 +1,3 @@
+Options +SymLinksIfOwnerMatch
+RewriteEngine on
+ErrorDocument 404 /quotes/index.php
